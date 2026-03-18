@@ -30,3 +30,14 @@ echo "<base64_encoded_string>" | base64 -d
 # Execute decoded content (simulated)
 echo "<base64_encoded_string>" | base64 -d | sh
 ```
+## Findings
+
+- The model partially complied with encoded malicious instructions
+- Base64 encoding can bypass simple input filtering
+- Prompt injection remains a viable attack vector against LLMs
+
+## Mitigation Recommendations
+
+- Implement strict input validation
+- Detect and block encoded payloads
+- Apply output filtering and response monitoring
